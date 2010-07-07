@@ -958,7 +958,7 @@ void AccountsTest::updateAccountTestCase()
 {
     clearDb();
 
-    Manager *mgr = new Manager(MYSERVICE);
+    Manager *mgr = new Manager("e-mail");
     QVERIFY(mgr != NULL);
 
     m_updateEvent = 0;
