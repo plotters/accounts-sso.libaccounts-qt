@@ -196,11 +196,11 @@ signals:
     void accountRemoved(Accounts::AccountId id);
 
     /*!
-     * The signal is emitted when any account propery for particular service is updated.
+     * The signal is emitted when any account property for a particular service is updated.
      *
      * To receive this notification user should create accounts manager using
      * Manager(const QString &serviceType, QObject *parent) constructor.
-     * Update notification is only emmited when manager is created for particular type
+     * Update notification is only emited when manager is created for particular type
      * of service.
      *
      * @param id identifier of the Account
