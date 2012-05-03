@@ -135,7 +135,6 @@ public:
     QString providerName() const;
 
     void selectService(const Service &service = Service());
-
     Service selectedService() const;
 
     /* QSettings-like methods */
@@ -151,12 +150,7 @@ public:
     void remove(const QString &key);
 
     void setValue(const QString &key, const QVariant &value);
-
-    void sync();
-    bool syncAndBlock();
-
     SettingSource value(const QString &key, QVariant &value) const;
-
     QString valueAsString(const QString &key,
                           QString default_value = QString::null,
                           SettingSource *source = 0) const;
@@ -171,6 +165,9 @@ public:
                      SettingSource *source = 0) const;
 
     Watch *watchKey(const QString &key = NULL);
+
+    void sync();
+    bool syncAndBlock();
 
     void remove();
 
