@@ -185,12 +185,13 @@ QSet<QString> * Service::tags()
         return m_tags;
 
     m_tags = new QSet<QString>;
-    GList *iter = ag_service_get_tags(m_service);
+    GList *list = ag_service_get_tags(m_service);
+    GList *iter = list;
     while (iter != NULL) {
         m_tags->insert(UTF8(reinterpret_cast<const gchar *> (iter->data)));
         iter = g_list_next(iter);
     }
-    g_list_free(iter);
+    g_list_free(list);
     return m_tags;
 }
 
