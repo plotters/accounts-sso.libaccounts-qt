@@ -171,10 +171,10 @@ bool ServiceType::hasTag(const QString &tag) const
  *
  * @return Set of tags
  */
-QSet<QString> * ServiceType::tags()
+const QSet<QString> & ServiceType::tags()
 {
     if (m_tags)
-        return m_tags;
+        return *m_tags;
 
     m_tags = new QSet<QString>;
     GList *list = ag_service_type_get_tags(m_serviceType);
@@ -184,7 +184,7 @@ QSet<QString> * ServiceType::tags()
         iter = g_list_next(iter);
     }
     g_list_free(list);
-    return m_tags;
+    return *m_tags;
 }
 
 /*!

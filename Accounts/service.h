@@ -62,7 +62,7 @@ public:
     QString provider() const;
     QString iconName() const;
     bool hasTag(const QString &tag) const;
-    QSet<QString> * tags();
+    const QSet<QString> & tags();
 
     const QDomDocument domDocument() const;
 
