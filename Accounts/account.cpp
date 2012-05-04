@@ -115,8 +115,8 @@ static QChar slash = QChar::fromLatin1('/');
  * common prefix, and not the actual key being changed.
  */
 
-Watch::Watch(QObject *parent)
-    : QObject(parent)
+Watch::Watch(QObject *parent) :
+    QObject(parent)
 {
 }
 
@@ -159,8 +159,9 @@ void Account::Private::on_deleted(Account *self)
  * Emitted when an error occurs.
  */
 
-Account::Account(AgAccount *account, QObject *parent)
-    : QObject(parent), d(new Private)
+Account::Account(AgAccount *account, QObject *parent) :
+    QObject(parent),
+    d(new Private)
 {
     TRACE();
     d->m_account = account;

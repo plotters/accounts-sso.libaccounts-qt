@@ -42,7 +42,7 @@ namespace Accounts {
  */
 }; // namespace
 
-Application::Application(AgApplication *application):
+Application::Application(AgApplication *application) :
     m_application(application)
 {
 }
@@ -51,7 +51,7 @@ Application::Application(AgApplication *application):
  * Copy constructor. Copying an Application object is very cheap, because the
  * data is shared among copies.
  */
-Application::Application(const Application &other):
+Application::Application(const Application &other) :
     m_application(other.m_application)
 {
     if (m_application != 0)

@@ -131,7 +131,7 @@ static QChar slash = QChar::fromLatin1('/');
 
 AccountServicePrivate::AccountServicePrivate(Account *account,
                                              const Service &service,
-                                             AccountService *accountService):
+                                             AccountService *accountService) :
     m_manager(account->manager()),
     q_ptr(accountService)
 {
@@ -174,7 +174,7 @@ void AccountServicePrivate::onChanged(AccountService *accountService)
  * @param account An Account.
  * @param service A Service supported by the account.
  */
-AccountService::AccountService(Account *account, const Service &service):
+AccountService::AccountService(Account *account, const Service &service) :
     d_ptr(new AccountServicePrivate(account, service, this))
 {
 }

@@ -49,8 +49,6 @@ namespace Accounts
 class ACCOUNTS_EXPORT ServiceType
 {
 public:
-    typedef QSet<QString> tagset_t;
-
     ServiceType();
     ServiceType(const ServiceType &other);
     ServiceType &operator=(const ServiceType &other);
