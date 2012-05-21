@@ -45,7 +45,7 @@ namespace Accounts {
  */
 }; // namespace
 
-ServiceType::ServiceType(AgServiceType *serviceType, ReferenceMode mode) :
+ServiceType::ServiceType(AgServiceType *serviceType, ReferenceMode mode):
     m_serviceType(serviceType),
     m_tags(0)
 {
@@ -57,7 +57,7 @@ ServiceType::ServiceType(AgServiceType *serviceType, ReferenceMode mode) :
 /*!
  * Construct an invalid serviceType.
  */
-ServiceType::ServiceType() :
+ServiceType::ServiceType():
     m_serviceType(0),
     m_tags(0)
 {
@@ -67,7 +67,7 @@ ServiceType::ServiceType() :
  * Copy constructor. Copying a ServiceType object is very cheap, because the
  * data is shared among copies.
  */
-ServiceType::ServiceType(const ServiceType &other) :
+ServiceType::ServiceType(const ServiceType &other):
     m_serviceType(other.m_serviceType),
     m_tags(0)
 {
@@ -171,7 +171,7 @@ bool ServiceType::hasTag(const QString &tag) const
  *
  * @return Set of tags
  */
-const QSet<QString> & ServiceType::tags()
+QSet<QString> ServiceType::tags() const
 {
     if (m_tags)
         return *m_tags;

@@ -43,7 +43,7 @@ namespace Accounts {
  */
 }; // namespace
 
-Provider::Provider(AgProvider *provider, ReferenceMode mode) :
+Provider::Provider(AgProvider *provider, ReferenceMode mode):
     m_provider(provider)
 {
     TRACE();
@@ -54,7 +54,7 @@ Provider::Provider(AgProvider *provider, ReferenceMode mode) :
 /*!
  * Construct an invalid provider.
  */
-Provider::Provider() :
+Provider::Provider():
     m_provider(0)
 {
 }
@@ -63,7 +63,7 @@ Provider::Provider() :
  * Copy constructor. Copying a Provider object is very cheap, because the
  * data is shared among copies.
  */
-Provider::Provider(const Provider &other) :
+Provider::Provider(const Provider &other):
     m_provider(other.m_provider)
 {
     if (m_provider != 0)

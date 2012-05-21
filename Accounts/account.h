@@ -66,7 +66,7 @@ enum SettingSource
     TEMPLATE
 };
 
-class ACCOUNTS_EXPORT Watch : public QObject
+class ACCOUNTS_EXPORT Watch: public QObject
 {
     Q_OBJECT
 
@@ -91,7 +91,7 @@ private:
     // \endcond
 };
 
-class ACCOUNTS_EXPORT Account : public QObject
+class ACCOUNTS_EXPORT Account: public QObject
 {
     Q_OBJECT
 

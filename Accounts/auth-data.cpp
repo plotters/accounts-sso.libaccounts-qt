@@ -45,7 +45,7 @@ namespace Accounts {
  */
 }; // namespace
 
-AuthData::AuthData(AgAuthData *authData) :
+AuthData::AuthData(AgAuthData *authData):
     m_authData(ag_auth_data_ref(authData))
 {
 }
@@ -54,7 +54,7 @@ AuthData::AuthData(AgAuthData *authData) :
  * Copy constructor. Copying an AuthData object is very cheap, because the data
  * is shared among copies.
  */
-AuthData::AuthData(const AuthData &other) :
+AuthData::AuthData(const AuthData &other):
     m_authData(ag_auth_data_ref(other.m_authData))
 {
 }

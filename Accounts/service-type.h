@@ -61,7 +61,7 @@ public:
     QString trCatalog() const;
     QString iconName() const;
     bool hasTag(const QString &tag) const;
-    const QSet<QString> & tags();
+    QSet<QString> tags() const;
 
     const QDomDocument domDocument() const;
 
@@ -75,7 +75,7 @@ private:
     friend class Manager;
     ServiceType(AgServiceType *serviceType, ReferenceMode mode = AddReference);
     AgServiceType *m_serviceType;
-    QSet<QString> *m_tags;
+    mutable QSet<QString> *m_tags;
     // \endcond
 };
 

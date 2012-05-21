@@ -45,7 +45,7 @@ namespace Accounts {
  */
 }; // namespace
 
-Service::Service(AgService *service, ReferenceMode mode) :
+Service::Service(AgService *service, ReferenceMode mode):
     m_service(service),
     m_tags(0)
 {
@@ -56,7 +56,7 @@ Service::Service(AgService *service, ReferenceMode mode) :
 /*!
  * Construct an invalid service.
  */
-Service::Service() :
+Service::Service():
     m_service(0),
     m_tags(0)
 {
@@ -66,7 +66,7 @@ Service::Service() :
  * Copy constructor. Copying a Service object is very cheap, because the
  * data is shared among copies.
  */
-Service::Service(const Service &other) :
+Service::Service(const Service &other):
     m_service(other.m_service),
     m_tags(0)
 {
@@ -179,7 +179,7 @@ bool Service::hasTag(const QString &tag) const
  *
  * @return Set of tags
  */
-const QSet<QString> & Service::tags()
+QSet<QString> Service::tags() const
 {
     if (m_tags)
         return *m_tags;

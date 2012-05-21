@@ -62,7 +62,7 @@ public:
     QString provider() const;
     QString iconName() const;
     bool hasTag(const QString &tag) const;
-    const QSet<QString> & tags();
+    QSet<QString> tags() const;
 
     const QDomDocument domDocument() const;
 
@@ -81,7 +81,7 @@ private:
     Service(AgService *service, ReferenceMode mode = AddReference);
     AgService *service() const;
     AgService *m_service;
-    QSet<QString> *m_tags;
+    mutable QSet<QString> *m_tags;
     // \endcond
 };
 
